@@ -63,7 +63,7 @@ vector<int> KMPSearch(const string& pat, const string& text){
 
 }
 
-bool foundSubsequences(vector<int>& positions){
+bool foundPatterns(vector<int>& positions){
     if(positions.empty()){
         return false;
     }
@@ -71,7 +71,7 @@ bool foundSubsequences(vector<int>& positions){
 }
 int main(){
 
-    string files[] = {"transmission1.txt","transmission2.txt","mcode1.txt","mcode2.txt","mcode3.txt"};
+    string files[] = {"transmission1.txt","transmission2.txt","mscode1.txt","mscode2.txt","mscode3.txt"};
     string stringfiles[5];
     ifstream file;
     stringstream buffer;
@@ -104,7 +104,7 @@ int main(){
     for (int ti = 0; ti < 2; ti++) {
         for (int pi = 0; pi < 3; pi++) {
             vector<int> pos = KMPSearch(stringfiles[2+pi], stringfiles[ti]);
-           if(foundSubsequences(pos)){
+           if(foundPatterns(pos)){
                 cout << textNames[ti] << " contains " << patternNames[pi] << " true" << " at positions: ";
                 for(int p : pos) cout << p << " ";
                 cout << endl;
