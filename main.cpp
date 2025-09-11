@@ -28,11 +28,12 @@ void constructPrefix(const string& pattern, vector<int>& prefix){
     }
 }
 
-bool KMPSearch(const string& pat, const string& text){
+vector<int> KMPSearch(const string& pat, const string& text){
     int n = text.length();
     int m = pat.length();
-    if(m == 0) return false;
+    if(m == 0) return {0};
     vector<int>prefix(m);
+    vector<int>positions;
     
     constructPrefix(pat, prefix);
 
@@ -44,7 +45,8 @@ bool KMPSearch(const string& pat, const string& text){
         }
 
         if(j == m){
-            return true;
+            positions.push_back(i-m+1);
+            j = prefix[j-1]; 
             
         }
         else if(i < n && pat[j] != text[i]){
@@ -57,10 +59,16 @@ bool KMPSearch(const string& pat, const string& text){
         }   
 
     }
-    return false;
+    return positions;
 
 }
-   
+
+bool foundSubsequences(vector<int>& positions){
+    if(positions.empty()){
+        return false;
+    }
+    return true;
+}
 int main(){
 
     string files[] = {"transmission1.txt","transmission2.txt","mcode1.txt","mcode2.txt","mcode3.txt"};
@@ -92,10 +100,17 @@ int main(){
     vector<string> textNames = {"text1", "text2"};
     vector<string> patternNames = {"pattern1", "pattern2", "pattern3"};
 
+
     for (int ti = 0; ti < 2; ti++) {
         for (int pi = 0; pi < 3; pi++) {
-            bool found = KMPSearch(stringfiles[2+pi], stringfiles[ti]);
-            cout << textNames[ti] << " contains " << patternNames[pi] << ": " << (found ? "true": "false") << endl;
+            vector<int> pos = KMPSearch(stringfiles[2+pi], stringfiles[ti]);
+           if(foundSubsequences(pos)){
+                cout << textNames[ti] << " contains " << patternNames[pi] << " true" << " at positions: ";
+                for(int p : pos) cout << p << " ";
+                cout << endl;
+                }else{
+                    cout << textNames[ti] << " does not contain " << patternNames[pi] << " false" << endl;
+                }
         }
     }
 
