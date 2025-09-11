@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(){
-    string files[] = {"transmission1.txt","transmission2.txt","mcode1.txt","mcode2.txt","mcode3.txt"};
+    string files[] = {"transmission1.txt","transmission2.txt","mscode1.txt","mscode2.txt","mscode3.txt"};
     string stringfiles[5];
     ifstream file;
     stringstream buffer;
