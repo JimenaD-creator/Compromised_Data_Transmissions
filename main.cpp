@@ -22,8 +22,6 @@ int main(){
 
         file_contents = buffer.str();
 
-        cout<<file_contents<<endl;
-
         stringfiles[i] = file_contents;
 
         file.close();
