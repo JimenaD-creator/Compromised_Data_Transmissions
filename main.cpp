@@ -62,7 +62,6 @@ vector<int> KMPSearch(const string& pat, const string& text){
     return positions;
 
 }
-
 bool findPatterns(const vector<int>& positions){
     if(positions.empty()){
         return false;
