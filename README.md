@@ -24,4 +24,28 @@ This project analyzes transmission files to detect malicious code patterns, iden
 ---
 
 ## 📂 Project Structure  
+```bash
+├── transmission1.txt   # First transmission file
+├── transmission2.txt   # Second transmission file
+├── mcode1.txt          # Malicious code pattern 1
+├── mcode2.txt          # Malicious code pattern 2
+├── mcode3.txt          # Malicious code pattern 3
+├── main.cpp            # Main source code with all algorithms
+```
 
+## ⚡ Algorithms Used  
+
+- **KMP (Knuth–Morris–Pratt)** → efficient pattern searching in O(n + m).  
+- **Manacher’s Algorithm** → finds the longest palindromic substring in O(n).  
+- **Dynamic Programming (LCS)** → finds the longest common substring in O(m × n).  
+
+---
+
+## 🛠️ Installation & Compilation  
+
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   g++ main.cpp -o transmission_too
+   ./transmission_tool
