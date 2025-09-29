@@ -99,7 +99,7 @@ The longest common substring between the transmissions starts at position: 3, an
 - KMP String Matching Algorithm
 - Dynamic programming approach for LCS.
   
-## 👩‍💻 Author
+## 👩‍💻 Authors
 
 Developed by:
 - Jimena Díaz Franco
