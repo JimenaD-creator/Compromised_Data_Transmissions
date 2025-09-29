@@ -47,5 +47,54 @@ This project analyzes transmission files to detect malicious code patterns, iden
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
-   g++ main.cpp -o transmission_too
-   ./transmission_tool
+   g++ main.cpp -o main.exe
+   ./main
+   ```
+## 📝 Example Input
+transmission1.txt
+ ```bash
+abcracecarmnopxyz
+ ```
+
+transmission2.txt
+ ```bash
+123racecar789xyz
+ ```
+
+mcode1.txt
+ ```bash
+race
+ ```
+
+mcode2.txt
+ ```bash
+xyz
+ ```
+
+mcode3.txt
+ ```bash
+123
+ ```
+
+## 🖥️ Example Output
+ ```bash
+.......................... Search malicious code within transmission files (Part 1)..............................
+mcode1 in transmission1: true, at positions: 3
+mcode2 in transmission1: true, at positions: 13
+mcode3 in transmission1: false
+mcode1 in transmission2: true, at positions: 3
+mcode2 in transmission2: true, at positions: 11
+mcode3 in transmission2: true, at positions: 0
+
+.......................... Find the longest palindrome in transmission files (Part 2)..............................
+The longest palindrome in transmission1 starts at position: 3, and ends at position: 11
+The longest palindrome in transmission2 starts at position: 3, and ends at position: 11
+
+...................... Longest Common Substrings between the transmission files (Part 3)........................
+The longest common substring between the transmissions starts at position: 3, and ends at position: 11
+ ```
+## 📖 References
+
+GeeksforGeeks: Manacher’s Algorithm
+KMP String Matching Algorithm
+Dynamic programming approach for LCS.
