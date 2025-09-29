@@ -98,3 +98,9 @@ The longest common substring between the transmissions starts at position: 3, an
 - GeeksforGeeks: Manacher’s Algorithm
 - KMP String Matching Algorithm
 - Dynamic programming approach for LCS.
+  
+##👩‍💻 Author
+Developed by:
+- Jimena Díaz Franco
+- María Guadalupe Soto Acosta
+- Ilan Gómez Guerrero
